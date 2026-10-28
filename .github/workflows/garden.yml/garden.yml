@@ -1,0 +1,24 @@
+
+name: Garden AI Automation
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 7,14 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check workflow
+        run: |
+          echo "Garden automation workflow started."
+          echo "Pakistan schedule: 12 PM and 7 PM."
+          echo "Video generation provider is not connected yet."
+          echo "Next step: configure video generation and YouTube upload."
