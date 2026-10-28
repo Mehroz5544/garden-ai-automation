@@ -1,0 +1,14 @@
+
+name: Garden AI Automation
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 7,14 * * *"
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test automation
+        run: echo "Garden automation is running"
